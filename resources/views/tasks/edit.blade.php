@@ -9,6 +9,9 @@
         {!! Form::label('content', 'タスク:') !!}
         {!! Form::text('content') !!}
     
+        {!! Form::label('status', 'ステータス:') !!}
+        {!! Form::select('status', ['未完了' => '未完了', '完了' => '完了', '保留' => '保留'], $task->status) !!}
+        
         {!! Form::submit('更新') !!}
      
     {!! Form::close() !!}
